@@ -1,13 +1,18 @@
-from todo.models import Todo
+from todo.services import TodoServices
 def main():
-    print("Todo项目启动成功")
-    print("在未来过程中完成增/删/改/查功能")
-    first_todo = Todo(1,"背单词",)
-    first_todo.complect=True
-    Second_todo = Todo(2,"听写",True)
-    print(first_todo)
-    print(Second_todo)
-
-
+    '''svc = TodoServices()
+    a = svc.add("Buy milk")
+    b = svc.add("Walk the dog")
+    print("增加功能:",svc.list_all())
+    
+    svc.update(a.id,completed=True)
+    svc.update(b.id,completed=True)
+    print("更新功能:",svc.list_all())
+    
+    svc.delete(a.id)
+    print("删除功能:",svc.list_all())'''
+    svc = TodoServices()
+    svc.add("Buy milk","Buy milk from the store")
+    
 if __name__ == "__main__":
     main()
